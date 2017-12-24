@@ -5,14 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Faith Studio</title>
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/paper.min.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <style>
+        body {
+            font-family: Microsoft JhengHei,
+            -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        /*輪播廣告利用底圖的方式讓圖案能縮到可見度*/
+        .custom-carousel {
+            min-height: 100vh;
+            background-size: cover;
+            background-position: center center;
+        }
+        .mytitle {
+            height: 100vh;
+        }
+    </style>
+    <script>
+        $().ready(function(){
+            $('.carousel-item').imagesLoaded( { background: true }, function() {
+                console.log('#container background image loaded');
+            });
+        })
+    </script>
 </head>
 <body>
+<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="500" data-pause="hover">
+    <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+        <li data-target="#carousel" data-slide-to="2"></li>
+        <li data-target="#carousel" data-slide-to="3"></li>
+        <li data-target="#carousel" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item custom-carousel active" style="background-image: url('img/bg01.jpg')">
+            <div class="mytitle d-flex justify-content-center">
+                <div class="align-content-center align-self-center">
+                    <h2 class="text-white text-center mb-1">Faith fay</h2>
+                    <h4 class="text-white text-center">just my personal website. <data value="2018.01.06">2018.01.06</data></h4>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item custom-carousel" style="background-image: url('img/bg02.jpg')">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>My wife & me</h3>
+                <p>Korea travel</p>
+            </div>
+        </div>
+        <div class="carousel-item custom-carousel" style="background-image: url('img/bg03.jpg')">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>Luck dogs</h3>
+                <p>Tometown Taitung</p>
+            </div>
+        </div>
+        <div class="carousel-item custom-carousel" style="background-image: url('img/bg04.jpg')">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>My twins</h3>
+                <p>Cute cute boy</p>
+            </div>
+        </div>
+        <div class="carousel-item custom-carousel" style="background-image: url('img/bg05.jpg')">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>My twins</h3>
+                <p>Cute cute girl</p>
+            </div>
+        </div>
+    </div>
+</div>
+<nav class="navbar">
 
+</nav>
 
-
-<script src="./js/jquery-3.2.1.min.js"></script>
-<script src="./js/popper.min.js"></script>
-<script src="./js/bootstrap.js"></script>
 </body>
 </html>
