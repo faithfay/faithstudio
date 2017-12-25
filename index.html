@@ -20,11 +20,20 @@
         /*輪播廣告利用底圖的方式讓圖案能縮到可見度*/
         .custom-carousel {
             min-height: 100vh;
+
+        }
+        .custom-bg-cover {
             background-size: cover;
             background-position: center center;
         }
-        .mytitle {
-            height: 100vh;
+        .first-carousel {
+            min-height: 100vh;
+        }
+        .carousel-content {
+            background-color: rgba(0,0,0,.1);
+        }
+        .test {
+            background-color: #9fcdff;
         }
     </style>
     <script>
@@ -36,7 +45,7 @@
     </script>
 </head>
 <body>
-<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="500" data-pause="hover">
+<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="50000" data-pause="hover">
     <ol class="carousel-indicators">
         <li data-target="#carousel" data-slide-to="0" class="active"></li>
         <li data-target="#carousel" data-slide-to="1"></li>
@@ -45,43 +54,59 @@
         <li data-target="#carousel" data-slide-to="4"></li>
     </ol>
     <div class="carousel-inner">
-        <div class="carousel-item custom-carousel active" style="background-image: url('img/bg01.jpg')">
-            <div class="mytitle d-flex justify-content-center">
-                <div class="align-content-center align-self-center">
-                    <h2 class="text-white text-center mb-1">Faith fay</h2>
+        <div class="carousel-item custom-carousel custom-bg-cover active" style="background-image: url('img/bg01.jpg')">
+            <div class="d-flex justify-content-center first-carousel">
+                <div class="container-fluid align-content-center align-self-center carousel-content">
+                    <h2 class="text-white text-center mb-0">Faith fay</h2>
                     <h4 class="text-white text-center">just my personal website. <data value="2018.01.06">2018.01.06</data></h4>
                 </div>
             </div>
         </div>
-        <div class="carousel-item custom-carousel" style="background-image: url('img/bg02.jpg')">
-            <div class="carousel-caption d-none d-md-block">
-                <h3>My wife & me</h3>
-                <p>Korea travel</p>
+        <div class="carousel-item custom-carousel custom-bg-cover" style="background-image: url('img/bg02.jpg')">
+            <div class="d-flex justify-content-center first-carousel">
+                <div class="container-fluid align-content-center align-self-center carousel-content">
+                    <h2 class="text-white text-center mb-0">My wife & me</h2>
+                    <h4 class="text-white text-center">Korea travel</h4>
+                </div>
             </div>
         </div>
-        <div class="carousel-item custom-carousel" style="background-image: url('img/bg03.jpg')">
-            <div class="carousel-caption d-none d-md-block">
-                <h3>Luck dogs</h3>
-                <p>Tometown Taitung</p>
+        <div class="carousel-item custom-carousel custom-bg-cover" style="background-image: url('img/bg03.jpg')">
+            <div class="d-flex justify-content-center first-carousel">
+                <div class="container-fluid align-content-center align-self-center carousel-content">
+                    <h2 class="text-white text-center mb-0">Luck dogs</h2>
+                    <h4 class="text-white text-center">Tometown Taitung</h4>
+                </div>
             </div>
         </div>
-        <div class="carousel-item custom-carousel" style="background-image: url('img/bg04.jpg')">
-            <div class="carousel-caption d-none d-md-block">
-                <h3>My twins</h3>
-                <p>Cute cute boy</p>
+        <div class="carousel-item custom-carousel custom-bg-cover" style="background-image: url('img/bg04.jpg')">
+            <div class="d-flex justify-content-center first-carousel">
+                <div class="container-fluid align-content-center align-self-center carousel-content">
+                    <h2 class="text-white text-center mb-0">My twins</h2>
+                    <h4 class="text-white text-center">Cute cute boy</h4>
+                </div>
             </div>
         </div>
-        <div class="carousel-item custom-carousel" style="background-image: url('img/bg05.jpg')">
-            <div class="carousel-caption d-none d-md-block">
-                <h3>My twins</h3>
-                <p>Cute cute girl</p>
+        <div class="carousel-item custom-carousel custom-bg-cover" style="background-image: url('img/bg05.jpg')">
+            <div class="d-flex justify-content-center first-carousel">
+                <div class="container-fluid align-content-center align-self-center carousel-content">
+                    <h2 class="text-white text-center mb-0">My twins</h2>
+                    <h4 class="text-white text-center">Cute cute girl</h4>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<nav class="navbar">
 
-</nav>
+<section class="bg-light">
+    <div class="container-fluid py-4">
+        <div class="row test">
+            <div class="col-lg-4">1</div>
+            <div class="col-lg-4">2</div>
+            <div class="col-lg-4">3</div>
+            <div class="col-lg-4">4</div>
+        </div>
+    </div>
+</section>
 
 </body>
 </html>
