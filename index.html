@@ -7,33 +7,31 @@
     <title>Faithfay</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/paper.min.css">
-    <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
     <style>
-        body {
-            font-family:
-            -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        }
+        /*body {*/
+            /*font-family:*/
+            /*-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
+        /*}*/
 
-        .custom-font {
-            font-family: Microsoft JhengHei,-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        }
+        /*.custom-font {*/
+            /*font-family: Microsoft JhengHei,-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
+        /*}*/
 
         /*輪播廣告利用底圖的方式讓圖案能縮到可見度*/
-        .custom-carousel {
+        .custom-height {
             min-height: 100vh;
-
         }
+        /*讓輪播底圖置中並且圖會盡量縮*/
         .custom-bg-cover {
             background-size: cover;
             background-position: center center;
         }
-        .first-carousel {
-            min-height: 100vh;
-        }
+        /*輪播標題的透明底色*/
         .carousel-content {
             background-color: rgba(0,0,0,.1);
         }
@@ -45,20 +43,18 @@
                 /*font-size: 1em;*/
             /*}*/
         /*}*/
-.carousel-caption{
-    width: 100%;
-}
+
     </style>
     <script>
         $().ready(function(){
-            $('.carousel-item').imagesLoaded( { background: true }, function() {
-                console.log('#container background image loaded');
-            });
+            // $('.carousel-item').imagesLoaded( { background: true }, function() {
+            //     console.log('#container background image loaded');
+            // });
         })
     </script>
 </head>
 <body>
-<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="50000" data-pause="hover">
+<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="10101" data-pause="hover">
     <ol class="carousel-indicators">
         <li data-target="#carousel" data-slide-to="0" class="active"></li>
         <li data-target="#carousel" data-slide-to="1"></li>
@@ -67,39 +63,41 @@
         <li data-target="#carousel" data-slide-to="4"></li>
     </ol>
     <div class="carousel-inner">
-        <div class="carousel-item custom-carousel custom-bg-cover active" style="background-image: url('img/bg01.jpg')">
-            <div class="d-flex justify-content-center first-carousel">
-                <div class="container-fluid align-content-center align-self-center carousel-content">
+        <div class="carousel-item active custom-height custom-bg-cover" style="background-image: url('img/bg01.jpg')">
+            <div class="d-flex justify-content-center align-items-center custom-height">
+                <div class="container-fluid carousel-content">
                     <h2 class="text-white text-center mb-0">Faith fay</h2>
                     <h4 class="text-white text-center">just my personal website. <data value="2018.01.06">2018.01.06</data></h4>
                 </div>
             </div>
         </div>
-        <div class="carousel-item custom-carousel custom-bg-cover" style="background-image: url('img/bg02.jpg')">
-            <div class="carousel-caption d-none d-md-block test">
-                <h2 class="text-white text-center mb-0">My wife & me</h2>
-                <h4 class="text-white text-center">Korea travel</h4>
+        <div class="carousel-item custom-height custom-bg-cover" style="background-image: url('img/bg02.jpg')">
+            <div class="d-flex justify-content-center align-items-center custom-height">
+                <div class="container-fluid carousel-content">
+                    <h2 class="text-white text-center mb-0">My wife & me</h2>
+                    <h4 class="text-white text-center">Korea travel</h4>
+                </div>
             </div>
         </div>
-        <div class="carousel-item custom-carousel custom-bg-cover" style="background-image: url('img/bg03.jpg')">
-            <div class="d-flex justify-content-center first-carousel">
-                <div class="container-fluid align-content-center align-self-center carousel-content">
+        <div class="carousel-item custom-height custom-bg-cover" style="background-image: url('img/bg03.jpg')">
+            <div class="d-flex justify-content-center align-items-center custom-height">
+                <div class="container-fluid carousel-content">
                     <h2 class="text-white text-center mb-0">Luck dogs</h2>
                     <h4 class="text-white text-center">Tometown Taitung</h4>
                 </div>
             </div>
         </div>
-        <div class="carousel-item custom-carousel custom-bg-cover" style="background-image: url('img/bg04.jpg')">
-            <div class="d-flex justify-content-center first-carousel">
-                <div class="container-fluid align-content-center align-self-center carousel-content">
+        <div class="carousel-item custom-height custom-bg-cover" style="background-image: url('img/bg04.jpg')">
+            <div class="d-flex justify-content-center align-items-center custom-height">
+                <div class="container-fluid carousel-content">
                     <h2 class="text-white text-center mb-0">My twins</h2>
                     <h4 class="text-white text-center">Cute cute boy</h4>
                 </div>
             </div>
         </div>
-        <div class="carousel-item custom-carousel custom-bg-cover" style="background-image: url('img/bg05.jpg')">
-            <div class="d-flex justify-content-center first-carousel">
-                <div class="container-fluid align-content-center align-self-center carousel-content">
+        <div class="carousel-item custom-height custom-bg-cover" style="background-image: url('img/bg05.jpg')">
+            <div class="d-flex justify-content-center align-items-center custom-height">
+                <div class="container-fluid carousel-content">
                     <h2 class="text-white text-center mb-0">My twins</h2>
                     <h4 class="text-white text-center">Cute cute girl</h4>
                 </div>
@@ -108,46 +106,54 @@
     </div>
 </div>
 
+<section>
+    <i class="far fa-user"></i>
+</section>
+
 <section class="bg-light">
     <div class="container-fluid">
-        <h2 class="text-center testfont">My project.</h2>
+        <h2 class="text-center">My project.</h2>
         <div class="row">
             <div class="md-3 col">
                 <div class="card w-100">
                     <div class="card-body">
+                        <div class="text-center text-secondary"><i class="far fa-user fa-5x"></i></div>
                         <h4 class="card-title">Service.</h4>
-                        <h5 class="card-subtitle custom-font">賺賺奶粉錢</h5>
-                        <p class="card-text custom-font">利用初老的腦袋提供小服務。想要架站並安裝一些小服務，或是想要一個特別的網頁，願意被我騙的請點選以下按鈕。</p>
-                        <button>cheat money out of</button>
+                        <h5 class="card-subtitle">person studio</h5>
+                        <p class="card-text">利用自己所學提供一網頁建置相關服務。架站、服務安裝及單頁網頁設計，有興趣的話再跟我聯繫聊聊吧。</p>
+                        <button>contact me</button>
                     </div>
                 </div>
             </div>
             <div class="md-3 col">
                 <div class="card w-100">
                     <div class="card-body">
+                        <div class="text-center text-secondary"><i class="fas fa-bug fa-5x"></i></div>
                         <h4 class="card-title">Crawler.</h4>
                         <h5 class="card-subtitle">java crawer</h5>
-                        <p class="card-text custom-font">無聊開發的一些網路爬蟲小程式，配合自動化以及定期發送資訊還蠻酷。</p>
-                        <button>bug bug</button>
+                        <p class="card-text">無聊開發的一些網路爬蟲小程式，配合排成方式達到即時監控最新資訊。</p>
+                        <button>detail</button>
                     </div>
                 </div>
             </div>
             <div class="md-3 col">
                 <div class="card w-100">
                     <div class="card-body">
+                        <div class="text-center text-secondary"><i class="far fa-sticky-note fa-5x"></i></div>
                         <h4 class="card-title">Notes.</h4>
                         <h5 class="card-subtitle">private note</h5>
-                        <p class="card-text custom-font">筆記本。描述我所獲得的，因為會忘記所以想辦法記清楚然後忘乾淨，需回憶再回來。</p>
-                        <button>just loooooking</button>
+                        <p class="card-text">筆記本。描述我所獲得的，因為會忘記所以想辦法記清楚然後忘乾淨，需回憶再回來。</p>
+                        <button>remember</button>
                     </div>
                 </div>
             </div>
             <div class="md-3 col">
                 <div class="card w-100">
                     <div class="card-body">
+                        <div class="text-center text-secondary"><i class="fas fa-code fa-5x"></i></div>
                         <h4 class="card-title">Program</h4>
                         <h5 class="card-subtitle">java component.</h5>
-                        <p class="card-text custom-font">自己開發的網頁元件。主要想法是可以提供給大家套用在自己網頁上或者是獨立套件，如有發現臭蟲請好心人回報給我喔。</p>
+                        <p class="card-text">自己開發的網頁元件。主要想法是可以提供給大家套用在自己網頁上或者是獨立套件，如有發現臭蟲請好心人回報給我喔。</p>
                         <button>click!!</button>
                     </div>
                 </div>
