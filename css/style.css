@@ -1,0 +1,51 @@
+/*為了讓flat不要搶字體*/
+html,body, h1, h2, h3, h4, h5, h6 {
+    font-family: Neucha,sans-serif,'Patrick Hand SC',sans-serif !important;
+    font-weight: 400;
+    font-size: 20px;
+}
+/*中文字體*/
+.chinese-font {
+    font-family: Microsoft JhengHei,-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+}
+/*個人大頭照*/
+.personal-img {
+    background-image: url("../img/p01.jpg");
+    background-size: cover;
+    background-position: center center;
+    max-width: 100%;
+    height: 300px;
+}
+/*大頭照中間的文字*/
+.personal-img-name-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+/*大頭照文字的對齊方式*/
+.name-flex-item{
+    align-self: flex-end;
+}
+/*文字邊框與內框歸0*/
+.name-flex-item > h6{
+    padding: 0;
+    margin: 0;
+}
+/*技能條背景*/
+.customer-progress {
+    background-color: #95A5A6;
+}
+/*技能條長度*/
+.customer-progress-bar {
+    height: 100%;
+    color: #FFFFFF;
+    background-color: #7F8C8D;
+}
+/*讓連結不要有底線圖案*/
+.link-not-decoration{
+    text-decoration:none !important;
+    background-image: none !important;
+    color: #7F8C8D;
+}
