@@ -4,163 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Faithfay</title>
+    <meta name="keywords" content="personal,java,websphere,jboss,crawler">
+    <meta name="description" content="This is my persional website. provide some java program to share.">
+    <title>Faith Fay Studio</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="Bookmark" type="image/x-icon" href="favicon.ico">
+
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/paper.min.css">
-    <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
-    <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <style>
-        /*body {*/
-            /*font-family:*/
-            /*-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
-        /*}*/
-
-        /*.custom-font {*/
-            /*font-family: Microsoft JhengHei,-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
-        /*}*/
-
-        /*輪播廣告利用底圖的方式讓圖案能縮到可見度*/
-        .custom-height {
-            min-height: 100vh;
-        }
-        /*讓輪播底圖置中並且圖會盡量縮*/
-        .custom-bg-cover {
-            background-size: cover;
-            background-position: center center;
-        }
-        /*輪播標題的透明底色*/
-        .carousel-content {
-            background-color: rgba(0,0,0,.1);
-        }
-        .test {
-            background-color: #9fcdff;
-        }
-        /*@media (max-width: 576px) {*/
-            /*.testfont{*/
-                /*font-size: 1em;*/
-            /*}*/
-        /*}*/
-
-    </style>
     <script>
         $().ready(function(){
-            // $('.carousel-item').imagesLoaded( { background: true }, function() {
-            //     console.log('#container background image loaded');
-            // });
+            //隨機背景圖案
+            var randombg = ['bg01','bg02','bg03','bg04'];
+            $('#header-bg').css('background-image','url("img/' + randombg[Math.floor(Math.random() * randombg.length)] + '.jpg")');
         })
     </script>
 </head>
-<body>
-<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="10101" data-pause="hover">
-    <ol class="carousel-indicators">
-        <li data-target="#carousel" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel" data-slide-to="1"></li>
-        <li data-target="#carousel" data-slide-to="2"></li>
-        <li data-target="#carousel" data-slide-to="3"></li>
-        <li data-target="#carousel" data-slide-to="4"></li>
-    </ol>
-    <div class="carousel-inner">
-        <div class="carousel-item active custom-height custom-bg-cover" style="background-image: url('img/bg01.jpg')">
-            <div class="d-flex justify-content-center align-items-center custom-height">
-                <div class="container-fluid carousel-content">
-                    <h2 class="text-white text-center mb-0">Faith fay</h2>
-                    <h4 class="text-white text-center">just my personal website. <data value="2018.01.06">2018.01.06</data></h4>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item custom-height custom-bg-cover" style="background-image: url('img/bg02.jpg')">
-            <div class="d-flex justify-content-center align-items-center custom-height">
-                <div class="container-fluid carousel-content">
-                    <h2 class="text-white text-center mb-0">My wife & me</h2>
-                    <h4 class="text-white text-center">Korea travel</h4>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item custom-height custom-bg-cover" style="background-image: url('img/bg03.jpg')">
-            <div class="d-flex justify-content-center align-items-center custom-height">
-                <div class="container-fluid carousel-content">
-                    <h2 class="text-white text-center mb-0">Luck dogs</h2>
-                    <h4 class="text-white text-center">Tometown Taitung</h4>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item custom-height custom-bg-cover" style="background-image: url('img/bg04.jpg')">
-            <div class="d-flex justify-content-center align-items-center custom-height">
-                <div class="container-fluid carousel-content">
-                    <h2 class="text-white text-center mb-0">My twins</h2>
-                    <h4 class="text-white text-center">Cute cute boy</h4>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item custom-height custom-bg-cover" style="background-image: url('img/bg05.jpg')">
-            <div class="d-flex justify-content-center align-items-center custom-height">
-                <div class="container-fluid carousel-content">
-                    <h2 class="text-white text-center mb-0">My twins</h2>
-                    <h4 class="text-white text-center">Cute cute girl</h4>
-                </div>
-            </div>
-        </div>
+<body class="bg-light chinese-font">
+<header id="header-bg" class="custom-height custom-bg-cover test1">
+    <nav class="nav p-2">
+        <a class="nav-link p-3 ml-1 custom-font-bg text-white" href="about.html" title="about me">關於我</a>
+        <a class="nav-link p-3 ml-3 custom-font-bg text-white" href="project.html" title="java program">專案</a>
+        <a class="nav-link p-3 ml-3 custom-font-bg text-white" href="notes.html" title="just notes">筆記</a>
+    </nav>
+    <div class="carousel-caption d-md-block">
+        <h3 class="font-weight-bold">Faith Fay Studio.</h3>
+        <p>腦袋快壞掉只好利用網頁記錄自己的人生。</p>
     </div>
-</div>
-
-<section>
-    <i class="far fa-user"></i>
-</section>
-
-<section class="bg-light">
-    <div class="container-fluid">
-        <h2 class="text-center">My project.</h2>
-        <div class="row">
-            <div class="md-3 col">
-                <div class="card w-100">
-                    <div class="card-body">
-                        <div class="text-center text-secondary"><i class="far fa-user fa-5x"></i></div>
-                        <h4 class="card-title">Service.</h4>
-                        <h5 class="card-subtitle">person studio</h5>
-                        <p class="card-text">利用自己所學提供一網頁建置相關服務。架站、服務安裝及單頁網頁設計，有興趣的話再跟我聯繫聊聊吧。</p>
-                        <button>contact me</button>
-                    </div>
-                </div>
-            </div>
-            <div class="md-3 col">
-                <div class="card w-100">
-                    <div class="card-body">
-                        <div class="text-center text-secondary"><i class="fas fa-bug fa-5x"></i></div>
-                        <h4 class="card-title">Crawler.</h4>
-                        <h5 class="card-subtitle">java crawer</h5>
-                        <p class="card-text">無聊開發的一些網路爬蟲小程式，配合排成方式達到即時監控最新資訊。</p>
-                        <button>detail</button>
-                    </div>
-                </div>
-            </div>
-            <div class="md-3 col">
-                <div class="card w-100">
-                    <div class="card-body">
-                        <div class="text-center text-secondary"><i class="far fa-sticky-note fa-5x"></i></div>
-                        <h4 class="card-title">Notes.</h4>
-                        <h5 class="card-subtitle">private note</h5>
-                        <p class="card-text">筆記本。描述我所獲得的，因為會忘記所以想辦法記清楚然後忘乾淨，需回憶再回來。</p>
-                        <button>remember</button>
-                    </div>
-                </div>
-            </div>
-            <div class="md-3 col">
-                <div class="card w-100">
-                    <div class="card-body">
-                        <div class="text-center text-secondary"><i class="fas fa-code fa-5x"></i></div>
-                        <h4 class="card-title">Program</h4>
-                        <h5 class="card-subtitle">java component.</h5>
-                        <p class="card-text">自己開發的網頁元件。主要想法是可以提供給大家套用在自己網頁上或者是獨立套件，如有發現臭蟲請好心人回報給我喔。</p>
-                        <button>click!!</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
+</header>
 </body>
 </html>
